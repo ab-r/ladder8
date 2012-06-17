@@ -174,7 +174,7 @@ class Player < ActiveRecord::Base
       chain  = self.ranked
 
       if params[:players] and not params[:players].empty?
-        chain = chain.unscoped.default_order.where :nick_parameterized => params[:players].collect {|p| p.downcase}
+        chain = chain.unscoped.default_order.where :nick_parameterized => params[:players].collect(&:downcase)
       end
       if params[:country] and not params[:country].empty?
         chain = chain.where :country => params[:country]

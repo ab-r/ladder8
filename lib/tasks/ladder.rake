@@ -44,7 +44,7 @@ namespace :ladder do
 
   def process_games url
     games = Nokogiri.HTML(open url).css('#games tbody tr').collect do |game|
-      game.children.collect{|td| td.content}[0,3]
+      game.children.collect(&:content)[0,3]
     end
 
     games.reject do |game|

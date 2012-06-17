@@ -12,6 +12,6 @@ class Team < ActiveRecord::Base
   validates_presence_of :name
 
   def ts_team
-    sides.collect {|s| s.ts_rating}
+    sides.collect &:ts_rating
   end
 end

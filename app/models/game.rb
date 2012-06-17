@@ -37,9 +37,7 @@ class Game < ActiveRecord::Base
   end
 
   def feed_body
-    sides.collect do |side|
-      side.to_s
-    end.join ' & '
+    sides.collect(&:to_s).join ' & '
   end
 
   def feed_title
@@ -166,13 +164,13 @@ class Game < ActiveRecord::Base
       chain  = self.confirmed.joins :map, {:sides => [:team, :player]}
 
       if params[:players] and not params[:players].empty?
-        chain = chain.where 'players.nick_parameterized' => params[:players].collect {|p| p.downcase}
+        chain = chain.where 'players.nick_parameterized' => params[:players].collect(&:downcase)
       end
       if params[:factions] and not params[:factions].empty?
-        chain = chain.where 'sides.faction' => params[:factions].collect {|f| f.downcase.titleize}
+        chain = chain.where 'sides.faction' => params[:factions].collect(&:downcase).collect(&:titleize)
       end
       if params[:leaders] and not params[:leaders].empty?
-        chain = chain.where 'sides.leader' => params[:leaders].collect {|l| l.downcase.titleize}
+        chain = chain.where 'sides.leader' => params[:leaders].collect(&:downcase).collect(&:titleize)
       end
       if params[:maps] and not params[:maps].empty?
         chain = chain.where 'maps.name_parameterized' => params[:maps].collect {|m| Map.parameterized_name m}

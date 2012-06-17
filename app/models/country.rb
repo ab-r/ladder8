@@ -45,7 +45,7 @@ class Country
     end
 
     def codes
-      all.keys.collect {|c| c.to_s}
+      all.keys.collect &:to_s
     end
 
     def filename code

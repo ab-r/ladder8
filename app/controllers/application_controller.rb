@@ -50,7 +50,7 @@ class ApplicationController < ActionController::Base
     processed = {}
 
     filter_blank(options).each do |option, items|
-      items = items.split(',').collect {|i| i.strip}
+      items = items.split(',').collect &:strip
       processed[option.to_sym] = items
     end
 
