@@ -6,7 +6,7 @@ class Side < ActiveRecord::Base
 
   default_scope order(:number)
   scope :confirmed, where('sides.confirmed = ?', true)
-  scope :sorted, reorder('id')
+  scope :sorted, joins(:team => :game).reorder('games.updated_at')
 
   validates_presence_of :color, :faction, :leader, :number
 
