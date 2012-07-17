@@ -6,7 +6,7 @@ class Comment < ActiveRecord::Base
   belongs_to :commentable, :polymorphic => true
   belongs_to :player
 
-  scope :recent, limit(6)
+  scope :recent, limit(18)
 
   validates_presence_of :body
 
