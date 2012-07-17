@@ -20,10 +20,10 @@
           = game_table_name game
         %td
           - game.sides.each do |side|
-            = side_link side if side.team.won?
+            %div= side_link side if side.team.won?
         %td
           - game.sides.each do |side|
-            = side_link side unless side.team.won?
+            %div= side_link side unless side.team.won?
         %td
           %i.icon-download-alt
           = link_to 'Download', game.replay
