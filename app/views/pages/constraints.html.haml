@@ -3,27 +3,28 @@
 
 = bootstrap_short_row do
   .alert.alert-info
-    Ladder8 does some work behind the scenes. Because of that you have to obey few simple
-    rules or otherwise game reports will be rejected. Those are mainly technical limitations
-    and nothing could be done if you will fail to fulfill them.
+    Ladder8 does some work behind the scenes to process your reported games. As a result you have to obey a few simple
+    rules, otherwise game reports will be rejected. These are mainly technical limitations
+    and nothing can be done to allow you to report your game if you do not follow the rules.
 
   .well
     %ol
       %li
-        %h4 Play using registered nick
+        %h4 Play using a registered nick
         %p
-          In ladder games you can only use nick that is registered on official forums, no extra characters are allowed.
-          If you need second login use nickname with differend cappitalization as games played using such nicks can be reported as well.
+          In ladder games you can only use a nick that is registered on the official Wesnoth forums, no extra characters are allowed.
+          If you need a second login, use a nickname with different capitalization, since games played using such nicks can be reported as well.
       %li
-        %h4 Game replay has to exist in replay archive
-        %p Because of that you will only be able to report games played on official server with observers allowed.
+        %h4 Game replay has to exist in the replay archive
+        %p Therefore you will only be able to report games played on the official server with observers allowed.
       %li
         %h4 Play only valid maps
-        %p Those are all mainline 1v1 and 2v2 maps plus maps avaiable in RBY add-on:
+        %p Those are all mainline 1v1 and 2v2 maps plus maps available in the RBY add-on:
         %p= non_breaking @maps
       %li
         %h4 Play only valid eras
         %p= non_breaking Game::VALID_ERAS
+        %p Please note that RBY No Mirror Era is currently disabled.
       %li
         %h4 Don't use RMP
-        %p Its not compatible with Ladder8.
+        %p It's not compatible with Ladder8.
