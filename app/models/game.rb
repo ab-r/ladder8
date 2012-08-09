@@ -20,8 +20,7 @@ class Game < ActiveRecord::Base
   scope :since,       lambda {|time| where 'games.created_at >= ?', time.days.ago}
   scope :unconfirmed, where('games.confirmed_cache = ?', false)
 
-  VALID_ERAS = ['Era Default']
-  #VALID_ERAS = ['Era Default', 'RBY No Mirror']
+  VALID_ERAS = ['Era Default', 'RBY No Mirror']
 
   validate :replay_is_unique, :replay_isnt_rmp, :sides_size_equals_players_size
   validates :era,     :inclusion  => {:in => VALID_ERAS}
