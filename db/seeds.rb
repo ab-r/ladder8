@@ -17,9 +17,9 @@ Player.create admins
 Player.all.each {|p| p.update_attribute :admin, true}
 
 maps_2p = [
-    "Aethermaw", "Arcanclave Citadel", "Astral Port", "Caves of the Basilisk", "Crescent Lake",
+    "Aethermaw", "Arcanclave Citadel", "Astral Port", "Caves of the Basilisk", "Clearing Gushes", "Crescent Lake",
     "Cynsaun Bettlefield", "Den of Onis", "Elensefar Courtyard", "Fallenstar Lake", "Hamlets",
-    "Hornshark Island", "Howling Ghost Badlands", "Sablestone Delta", "Serpent Ford",
+    "Hornshark Island", "Howling Ghost Badlands", "Sablestone Delta", "Serpent Ford", "Scarred Foothills",
     "Silverhead Crossing", "Sulla's Ruins", "Swamp Of Dread", "The Freelands", "The Walls Of Pyrennis",
     "Thousand Stings Garrison", "Tombs of Kesorak",
     "Weldyn Channel"
