@@ -6,7 +6,7 @@ Ladder8::Application.routes.draw do
   post 'security/login', :as => :login
   get  'security/logout', :as => :logout
 
-  root :to => 'games#index'
+  root :to => 'news#index'
 
   with_options :only => [:create, :destroy] do |comment_options|
     resources :games, :only => [:index, :show, :create] do
