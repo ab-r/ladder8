@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.2'
+gem 'rails', '3.2.8'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -29,7 +29,6 @@ group :development do
   gem 'awesome_print'
   gem 'pry'
   gem 'pry-rails'
-  gem 'ruby-debug'
 end
 
 # For this app it may be too much
