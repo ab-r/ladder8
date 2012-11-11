@@ -148,9 +148,7 @@ class Replay
     def load uri
       replay = new
       replay.replay = uri
-
-      reader = Weskit::WML::Reader.new
-      replay.nodes = reader.read_uri uri
+      replay.nodes  = Weskit::WML::Parser.uri uri, :simple
 
       replay
     end
