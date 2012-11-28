@@ -8,11 +8,6 @@ namespace :replays do
     search_archive 'RBY_Side'
   end
 
-  desc "Displays RMP replays from last week"
-  task :rmp => :environment do
-    search_archive 'RMPSide'
-  end
-
   private
 
   def search_archive name
