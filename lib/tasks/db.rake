@@ -1,5 +1,5 @@
 namespace :db do
-  desc 'Recalculates ratings of sides attached to confirmed games'
+  desc 'Recalculate player/side ratings'
   task :recalculate => :environment do
     Player.find_in_batches do |players|
       players.each {|p| p.deviation = p.deviation_initial ; p.mean = p.mean_initial ; p.save!}
