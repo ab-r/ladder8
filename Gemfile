@@ -31,16 +31,6 @@ group :development do
   gem 'pry-rails'
 end
 
-# For this app it may be too much
-# group :test do
-#   gem 'capybara'
-#   gem 'guard-rspec'
-#   gem 'launchy'
-#   gem 'libnotify'
-#   gem 'rspec-rails'
-#   gem 'shoulda'
-# end
-
 # Use unicorn as the web server
 # gem 'unicorn'
 
