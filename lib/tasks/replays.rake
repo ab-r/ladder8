@@ -1,7 +1,7 @@
+require 'ansicolor'
 require 'nokogiri'
 require 'open-uri'
 require 'replay'
-require 'term/ansicolor'
 
 namespace :replays do
   desc 'Display RBY games'
@@ -43,10 +43,6 @@ namespace :replays do
     end
 
     games
-  end
-
-  def ac
-    Term::ANSIColor
   end
 
   def first_match data, sel
